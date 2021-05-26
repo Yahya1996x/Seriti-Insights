@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard | Seriti Insights</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Seriti Insights" name="description" />
+    <meta content="yahya" name="author" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="app sidebar-mini">
+      
+    <!-- Navbar-->
+    <header class="app-header"><a class="app-header__logo" href="index.html"></a>
+      <!-- Sidebar toggle button-->
+        <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+
+      <!-- Navbar Right Menu Start-->
+      <ul class="app-nav">
+        <li class="app-search">
+          <input class="app-search__input" type="search" placeholder="Search">
+          <button class="app-search__button"><i class="fa fa-search"></i></button>
+        </li>
+        <!--Notification Tab-->
+        <li class="dropdown"><a class="app-nav__item" href="javascript: void(0);" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+
+        </li>
+        <!-- Users Tab-->
+        <li class="dropdown"><a class="app-nav__item" href="javascript: void(0);" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+
+        </li>
+      </ul>
+    </header>
+      
+      
+    <!-- Sidebar menu-->
+    <div class="sidebar-color" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+
+      <ul class="app-menu">
+        <li><a class="dash-menu-item active" href="dashboard.html"><i class="dash-menu-icon fa fa-dashboard"></i><span class="dash-label">Dashboard</span></a></li>
+        <li class="treeview"><a class="dash-menu-item" href="javascript: void(0);" data-toggle="treeview"><i class="dash-menu-icon fa fa-laptop"></i><span class="dash-label">UI Elements</span><i class="dash-label fa fa-angle-right"></i></a>
+
+        </li>
+        <li><a class="dash-menu-item" href="javascript: void(0);"><i class="dash-menu-icon fa fa-pie-chart"></i><span class="dash-label">Charts</span></a></li>
+        <li class="treeview"><a class="dash-menu-item" href="javascript: void(0);" data-toggle="treeview"><i class="dash-menu-icon fa fa-edit"></i><span class="dash-label">Forms</span><i class="dash-label fa fa-angle-right"></i></a>
+
+        </li>
+          
+        <li class="treeview"><a class="dash-menu-item" href="javascript: void(0);" data-toggle="treeview"><i class="dash-menu-icon fa fa-th-list"></i><span class="dash-label">Tables</span><i class="dash-label fa fa-angle-right"></i></a>
+
+        </li>
+        <li class="treeview"><a class="dash-menu-item" href="javascript: void(0);" data-toggle="treeview"><i class="dash-menu-icon fa fa-file-text"></i><span class="dash-label">Pages</span><i class="dash-label fa fa-angle-right"></i></a>
+
+        </li>
+          
+        <li><a class="dash-menu-item" href="javascript: void(0);"><i class="dash-menu-icon fa fa-file-code-o"></i><span class="dash-label">Docs</span></a></li>
+      </ul>
+    </aside>
+    <main class="sidebar-content">
+        
+    <!-- main header start-->
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
+          <p>Let's see if you can build this</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+        </ul>
+      </div>
+    <!-- main header end --> 
+        
+      <!-- first row start -->
+        <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+            <div class="info">
+              <h4>Users</h4>
+              <p><b>5</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
+            <div class="info">
+              <h4>Likes</h4>
+              <p><b>25</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
+            <div class="info">
+              <h4>Uploades</h4>
+              <p><b>10</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
+            <div class="info">
+              <h4>Stars</h4>
+              <p><b>500</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- first row end -->
+        
+        
+      <div class="row">
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Monthly Sales</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Support Requests</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+        
+    </main>
+      
+      
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/plugins/pace.min.js"></script>
+    <script type="text/javascript" src="js/plugins/chart.js"></script>
+    <script type="text/javascript">
+      var data = {
+      	labels: ["January", "February", "March", "April", "May"],
+      	datasets: [
+      		{
+      			label: "linechart-data",
+      			fillColor: "rgba(220,220,220,0.2)",
+      			strokeColor: "rgba(220,220,220,1)",
+      			pointColor: "rgba(220,220,220,1)",
+      			pointStrokeColor: "#fff",
+      			pointHighlightFill: "#fff",
+      			pointHighlightStroke: "rgba(220,220,220,1)",
+      			data: [65, 59, 80, 81, 56]
+      		},
+      		{
+      			label: "pie-data",
+      			fillColor: "rgba(151,187,205,0.2)",
+      			strokeColor: "rgba(151,187,205,1)",
+      			pointColor: "rgba(151,187,205,1)",
+      			pointStrokeColor: "#fff",
+      			pointHighlightFill: "#fff",
+      			pointHighlightStroke: "rgba(151,187,205,1)",
+      			data: [28, 48, 40, 19, 86]
+      		}
+      	]
+      };
+      var pdata = [
+      	{
+      		value: 300,
+      		color: "#46BFBD",
+      		highlight: "#5AD3D1",
+      		label: "Complete"
+      	},
+      	{
+      		value: 50,
+      		color:"#F7464A",
+      		highlight: "#FF5A5E",
+      		label: "In-Progress"
+      	}
+      ]
+      
+      var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+      var lineChart = new Chart(ctxl).Line(data);
+      
+      var ctxp = $("#pieChartDemo").get(0).getContext("2d");
+      var pieChart = new Chart(ctxp).Pie(pdata);
+    </script>
+
+  </body>
+</html>
